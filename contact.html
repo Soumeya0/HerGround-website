@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved | HerGround</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Additional styles for contact page */
+        .page-header {
+            text-align: center;
+            padding: var(--space-2xl) 0 var(--space-xl);
+            margin-top: 60px;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        .page-header p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .logo-header {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-bottom: var(--space-md);
+        }
+        
+        .involvement-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin: var(--space-2xl) 0;
+        }
+        
+        .option-card {
+            background: var(--bg-primary);
+            padding: var(--space-xl);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .option-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .option-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-lg);
+            color: white;
+            font-size: 1.75rem;
+        }
+        
+        .option-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        .option-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+            flex-grow: 1;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            padding: 0.875rem 1.75rem;
+            background-color: var(--accent);
+            color: white;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border: 1px solid var(--accent);
+            width: 100%;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--accent-light);
+            border-color: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: white;
+        }
+        
+        .cta-button i {
+            font-size: 1rem;
+        }
+        
+        .contact-info {
+            text-align: center;
+            padding: var(--space-xl);
+            background: var(--bg-primary);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border-color);
+            margin: var(--space-2xl) 0;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        .contact-info h3 i {
+            color: var(--accent);
+            margin-right: var(--space-sm);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .page-header p {
+                font-size: 1rem;
+            }
+            
+            .involvement-options {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-header {
+                padding: var(--space-xl) 0 var(--space-lg);
+            }
+            
+            .page-header h1 {
+                font-size: 1.75rem;
+            }
+            
+            .option-card {
+                padding: var(--space-lg);
+            }
+            
+            .contact-info {
+                padding: var(--space-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="Her groung LG png.png" alt="Her Ground Logo" class="logo" style="width: 60px; height: 60px;">
+            </a>
+            
+            <button class="menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#pillars">Pillars</a></li>
+                <li><a href="index.html#programs">Programs</a></li>
+                <li><a href="index.html#community">Community</a></li>
+                <li><a href="get-involved.html" class="active">Get Involved</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header class="page-header">
+            <div class="logo-header">HERGROUND</div>
+            <h1>Get Involved</h1>
+            <p>Choose how you'd like to be part of HerGround and help empower the next generation of leaders.</p>
+        </header>
+        
+        <div class="involvement-grid">
+                <!-- Partner With Us Card -->
+                <div class="involvement-card">
+                    <div class="involvement-visual">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Partnership meeting" 
+                             loading="lazy">
+                    </div>
+                    <div class="involvement-content">
+                        <div class="involvement-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Partner With Us</h3>
+                        <p>Community centers, schools, and organizations interested in collaboration.</p>
+                        <a href="#" class="involvement-link">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Nominate for Spotlight Card -->
+                <div class="involvement-card">
+                    <div class="involvement-visual">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Spotlight nomination" 
+                             loading="lazy">
+                    </div>
+                    <div class="involvement-content">
+                        <div class="involvement-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Nominate for Spotlight</h3>
+                        <p>Highlight yourself or someone else in our community feature series.</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdcdEXp9ylixx7IcpVX9rTjR3wYdFHebSrh8qcWCx_SptRZQ/viewform?usp=header"target="_blank" class="involvement-link">
+                            Submit Nominations
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Join as Member Card -->
+                <div class="involvement-card">
+                    <div class="involvement-visual">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Join as member" 
+                             loading="lazy">
+                    </div>
+                    <div class="involvement-content">
+                        <div class="involvement-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h3>Join as Member</h3>
+                        <p>Become part of our community and access programs, events, and support.</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7bArrXmuD-PdxHdfC4dENzHjFXZNi4hOmbnOvbwHz8ldj3Q/viewform?usp=header"target="_blank" class="involvement-link">
+                            Join Now
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Volunteer With Us Card -->
+                <div class="involvement-card">
+                    <div class="involvement-visual">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4H019jK24F6e3V3xRfB0Ly-be2KaSHSmElg&s?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                            alt="Volunteers working together" 
+                            loading="lazy"
+                            style="width: 100%; height: 200px; object-fit: cover;">
+                    </div>
+                    <div class="involvement-content">
+                        <div class="involvement-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Volunteer With Us</h3>
+                        <p>Join our passionate team of volunteers and make a real difference in your community.</p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7bArrXmuD-PdxHdfC4dENzHjFXZNi4hOmbnOvbwHz8ldj3Q/viewform?usp=header" target="_blank" class="involvement-link">
+                            Join Our Team
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <!-- Contact Info -->
+        <div class="contact-info fade-in">
+            <h3><i class="fas fa-envelope"></i> Questions?</h3>
+            <p>We're here to help! Reach out to us directly:</p>
+            <div style="margin-top: 1.5rem;">
+                <a href="mailto:Info.herground@gmail.com" class="cta-button" style="background: linear-gradient(135deg, var(--accent), var(--accent-light));">
+                    <i class="fas fa-paper-plane"></i>
+                    Email Us
+                </a>
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--text-tertiary);">
+                Typically responds within 24 hours
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="Her groung LG png.png" alt="Her Ground Logo" style="width: 60px; height: 60px;">
+                    </div>
+                    <p class="footer-tagline">
+                        Empowering girls and young women through leadership, education, and community support.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/thisisherground" class="social-link" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://discord.gg/mqjYGmQNRm" class="social-link" target="_blank" aria-label="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/herground" class="social-link" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 Her Ground. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

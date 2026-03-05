@@ -1,0 +1,20 @@
+education for the website code
+<div class="pillar-card">
+                    <div class="pillar-visual">
+                        <div class="pillar-image">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Education and learning" 
+                                 loading="lazy">
+                        </div>
+                        <div class="pillar-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <h3>Education</h3>
+                    <p>Practical skill-building through interactive workshops and real-world applications.</p>
+                    <ul class="pillar-features">
+                        <li>Hands-on workshops</li>
+                        <li>Real-world scenarios</li>
+                        <li>SDG-focused learning</li>
+                    </ul>
+                </div>
